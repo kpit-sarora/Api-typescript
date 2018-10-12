@@ -23,7 +23,10 @@ export default class UsersController{
        client.query(query)
           .then(obj => {
           console.log(obj.rows);
+          if(obj.rows[0]!=null)
+          {
           delete obj.rows[0].password;
+          }
           res.send(obj.rows[0]);      
           })
           .catch(e => {
