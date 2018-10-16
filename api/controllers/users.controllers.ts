@@ -7,7 +7,7 @@ export default class UsersController{
      
     }  
     UserLogin=(req:Request,res:Response)=>{
-        console.log("I am Called");
+        
         var client:pg.Client = dbcon.get();
         var emailId = req.body.emailId;
         var password = req.body.password;
